@@ -10,7 +10,7 @@ const MonsterList = () => {
       <h2>Monster List</h2>
       <ul>
         {monsters.map((monster: Monster) => (
-          <li key={monster.id}>{monster.name}</li>
+          <li key={monster.id}>{monster.firstName}</li>
         ))}
       </ul>
     </div>
