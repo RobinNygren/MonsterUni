@@ -27,4 +27,13 @@ type MonsterContextType = {
   setMonsters: (monsters: Monster[]) => void;
 };
 
-export type { Monster, MonsterContextType };
+type Action =
+  | { type: "ADD_MONSTERS"; payload: Monster }
+  | { type: "REMOVE_MONSTER"; payload: Monster }
+  | { type: "UPDATE_MONSTER"; payload: Monster };
+
+type GlobalState = {
+  monsters: Monster[];
+};
+
+export type { Monster, MonsterContextType, Action, GlobalState };
