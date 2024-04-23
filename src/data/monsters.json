@@ -1,12 +1,182 @@
 [
-  { "name": "Dracula" },
-  { "name": "Frankenstein" },
-  { "name": "Werewolf" },
-  { "name": "Mummy" },
-  { "name": "Zombie" },
-  { "name": "Goblin" },
-  { "name": "Troll" },
-  { "name": "Ghost" },
-  { "name": "Witch" },
-  { "name": "Vampire" }
+  {
+    "firstName": "Fluffzilla",
+    "lastName": "Woollysocks",
+    "description": "A small, round creature covered in sky-blue fur, Fluffzilla can often be found bouncing around in the Cloud Meadows.",
+    "abilities": {
+      "science": "Cloud manipulation",
+      "magic": "Mist generation"
+    },
+    "origin": "Cloud Meadows",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 2,
+      "tentacles": 0,
+      "eyes": 2,
+      "arms": 2,
+      "tails": 1
+    }
+  },
+  {
+    "firstName": "Blink",
+    "lastName": "Quickwhisk",
+    "description": "This speedy monster has transparent wings and moves faster than the eye can follow. Its fur sparkles with static energy.",
+    "abilities": {
+      "science": "Super speed",
+      "magic": "Invisibility"
+    },
+    "origin": "Thunder Plains",
+    "physicalAttributes": {
+      "wings": 2,
+      "horns": 0,
+      "tentacles": 0,
+      "eyes": 2,
+      "arms": 2,
+      "tails": 0
+    }
+  },
+  {
+    "firstName": "Glimmer",
+    "lastName": "Starfire",
+    "description": "Glimmer shines brightly in the night sky, her small form barely noticeable against the backdrop of the galaxy.",
+    "abilities": {
+      "science": "Light absorption",
+      "magic": "Starlight projection"
+    },
+    "origin": "Galactic Gateway",
+    "physicalAttributes": {
+      "wings": 4,
+      "horns": 1,
+      "tentacles": 0,
+      "eyes": 4,
+      "arms": 2,
+      "tails": 2
+    }
+  },
+  {
+    "firstName": "Tentacly",
+    "lastName": "Squibble",
+    "description": "An aquatic creature with a cheerful personality, Tentacly loves to hug with his many tentacles.",
+    "abilities": {
+      "science": "Underwater breathing",
+      "magic": "Water bending"
+    },
+    "origin": "Ocean Abyss",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 0,
+      "tentacles": 8,
+      "eyes": 2,
+      "arms": 0,
+      "tails": 0
+    }
+  },
+  {
+    "firstName": "Gruff",
+    "lastName": "McSnort",
+    "description": "Gruff's intimidating exterior with multiple horns hides a gentle heart that loves poetry.",
+    "abilities": {
+      "science": "Super strength",
+      "magic": "Earth manipulation"
+    },
+    "origin": "Highland Caves",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 4,
+      "tentacles": 0,
+      "eyes": 2,
+      "arms": 2,
+      "tails": 1
+    }
+  },
+  {
+    "firstName": "Flicker",
+    "lastName": "Emberwind",
+    "description": "Always alight with a soft, warm glow, Flicker is a beacon of comfort and warmth to those who feel lost.",
+    "abilities": {
+      "science": "Fire resistance",
+      "magic": "Flame casting"
+    },
+    "origin": "Volcano Valley",
+    "physicalAttributes": {
+      "wings": 2,
+      "horns": 0,
+      "tentacles": 0,
+      "eyes": 3,
+      "arms": 2,
+      "tails": 1
+    }
+  },
+  {
+    "firstName": "Echo",
+    "lastName": "Silversong",
+    "description": "With a voice that can mimic any sound in the universe, Echo is a mysterious and enchanting presence.",
+    "abilities": {
+      "science": "Sound manipulation",
+      "magic": "Illusion creation"
+    },
+    "origin": "Mystic Mountains",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 2,
+      "tentacles": 0,
+      "eyes": 2,
+      "arms": 4,
+      "tails": 0
+    }
+  },
+  {
+    "firstName": "Muddle",
+    "lastName": "Mossfoot",
+    "description": "Muddle wanders the forest, blending in perfectly with the moss and foliage that cover his body.",
+    "abilities": {
+      "science": "Camouflage",
+      "magic": "Plant growth"
+    },
+    "origin": "Enchanted Forest",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 0,
+      "tentacles": 0,
+      "eyes": 2,
+      "arms": 2,
+      "tails": 1
+    }
+  },
+  {
+    "firstName": "Whirl",
+    "lastName": "Gustfeather",
+    "description": "This light-as-air monster can create gusts of wind with a simple flap of her delicate wings.",
+    "abilities": {
+      "science": "Air manipulation",
+      "magic": "Flight"
+    },
+    "origin": "Sky Highlands",
+    "physicalAttributes": {
+      "wings": 6,
+      "horns": 0,
+      "tentacles": 0,
+      "eyes": 1,
+      "arms": 2,
+      "tails": 2
+    }
+  },
+  {
+    "firstName": "Bramble",
+    "lastName": "Nightshade",
+    "description": "Dark as the night and twice as mysterious, Bramble has a charm that is hard to resist.",
+    "abilities": {
+      "science": "Night vision",
+      "magic": "Shadow manipulation"
+    },
+    "origin": "Twilight Zone",
+    "physicalAttributes": {
+      "wings": 0,
+      "horns": 2,
+      "tentacles": 4,
+      "eyes": 4,
+      "arms": 2,
+      "tails": 1
+    }
+  }
 ]
