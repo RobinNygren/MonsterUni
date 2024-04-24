@@ -1,18 +1,30 @@
 import useCustomContext from "../../hooks/useMonster";
 import { MonsterContext } from "../Context/MonsterContext";
-import { Monster, MonsterContextType } from "../../types";
+import { Monster, MonsterContextType, MonsterListProps } from "../../types";
 
-const MonsterList = () => {
+const MonsterList = ({ monsterId }: MonsterListProps) => {
   const { monsters } = useCustomContext<MonsterContextType>(MonsterContext);
+  const monster = monsters?.find((m) => m.id === monsterId);
 
   return (
     <div>
-      <h2>Monster List</h2>
-      <ul>
-        {monsters.map((monster: Monster) => (
-          <li key={monster.id}>{monster.firstName}</li>
-        ))}
-      </ul>
+      {monster ? (
+        <ul>
+          <li>
+            <h3>
+              {monster.firstName} {monster.lastName}
+            </h3>
+            <p>Description: {monster.description}</p>
+            <p>
+              Abilities: Science - {monster.abilities.science}, Magic -{" "}
+              {monster.abilities.magic}
+            </p>
+            <p>Origin: {monster.origin}</p>
+          </li>
+        </ul>
+      ) : (
+        <p>Monster not found.</p>
+      )}
     </div>
   );
 };
