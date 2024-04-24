@@ -1,12 +1,13 @@
 import { Menu } from "@headlessui/react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="text-xl font-bold">
+        <NavLink to="/" className="text-xl font-bold">
           Monsters University
-        </a>
+        </NavLink>
         <div className="flex items-center space-x-4">
           <Menu as="div" className="relative">
             <Menu.Button className="px-4 py-2 rounded hover:bg-gray-700">
@@ -16,34 +17,40 @@ const Navbar = () => {
               <div className="p-1">
                 <Menu.Item>
                   {({ active }) => (
-                    <a
-                      href="/addmonster"
+                    <NavLink
+                      to="/addmonster"
                       className={`${
                         active ? "bg-gray-100" : ""
                       } group flex rounded-md items-center w-full p-2 text-sm text-gray-900`}
                     >
                       Add Monster
-                    </a>
+                    </NavLink>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a
-                      href="/updatemonster"
+                    <NavLink
+                      to="/updatemonster"
                       className={`${
                         active ? "bg-gray-100" : ""
                       } group flex rounded-md items-center w-full p-2 text-sm text-gray-900`}
                     >
                       Update Monster
-                    </a>
+                    </NavLink>
                   )}
                 </Menu.Item>
               </div>
             </Menu.Items>
           </Menu>
-          <a href="/about" className="hover:bg-gray-700 px-4 py-2 rounded">
+          <NavLink
+            to="/monsters"
+            className="hover:bg-gray-700 px-4 py-2 rounded"
+          >
+            Monsters
+          </NavLink>
+          <NavLink to="/about" className="hover:bg-gray-700 px-4 py-2 rounded">
             About
-          </a>
+          </NavLink>
           <a href="/contact" className="hover:bg-gray-700 px-4 py-2 rounded">
             Contact
           </a>

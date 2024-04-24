@@ -10,9 +10,7 @@ export const HomePage = () => {
       <div className="flex flex-col min-h-screen">
         <Header />
         <Navbar />
-        <main className="flex-grow">
-          <MyModal />
-        </main>
+        <main className="flex-grow"></main>
         <Outlet />
         <Footer />
       </div>

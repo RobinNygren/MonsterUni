@@ -15,11 +15,11 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/monsters",
+        path: "monsters",
         element: <MonstersPage />,
         children: [
           {
-            path: "/monsters/:monstersId",
+            path: ":monstersId",
             element: <MonsterPage />,
           },
         ],
