@@ -51,9 +51,12 @@ const Navbar = () => {
           <NavLink to="/about" className="hover:bg-gray-700 px-4 py-2 rounded">
             About
           </NavLink>
-          <a href="/contact" className="hover:bg-gray-700 px-4 py-2 rounded">
+          <NavLink
+            to="/contact"
+            className="hover:bg-gray-700 px-4 py-2 rounded"
+          >
             Contact
-          </a>
+          </NavLink>
         </div>
       </div>
     </nav>

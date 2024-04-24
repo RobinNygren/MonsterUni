@@ -36,4 +36,14 @@ type GlobalState = {
   monsters: Monster[];
 };
 
-export type { Monster, MonsterContextType, Action, GlobalState };
+type MonsterListProps = {
+  monsterId: string;
+};
+
+export type {
+  Monster,
+  MonsterContextType,
+  Action,
+  GlobalState,
+  MonsterListProps,
+};
