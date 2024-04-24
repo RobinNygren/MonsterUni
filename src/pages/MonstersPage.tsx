@@ -11,7 +11,7 @@ export const MonstersPage = () => {
         {monsters.map((monster: Monster) => (
           <NavLink
             key={monster.firstName}
-            to={`/monsters/${monster.firstName}`}
+            to={`/monsters/${monster.id}`}
             className={({ isActive }) => {
               return isActive ? "text-blue-500" : "";
             }}
