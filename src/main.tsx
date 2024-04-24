@@ -13,14 +13,16 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
     errorElement: <NotFoundPage />,
-  },
-  {
-    path: "/monsters",
-    element: <MonstersPage />,
     children: [
       {
-        path: "/monsters/:monstersId",
-        element: <MonsterPage />,
+        path: "/monsters",
+        element: <MonstersPage />,
+        children: [
+          {
+            path: "/monsters/:monstersId",
+            element: <MonsterPage />,
+          },
+        ],
       },
     ],
   },
