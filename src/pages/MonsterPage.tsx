@@ -1,11 +1,18 @@
 import { useParams } from "react-router-dom";
+import MonsterList from "../components/MonsterList/MonsterList";
 
 export const MonsterPage = () => {
-  const params = useParams<{ monstersId: string }>();
+  const { monsterId } = useParams<{ monsterId?: string }>();
+
+  if (!monsterId) {
+    return <p>No monster selected or incorrect monster ID.</p>;
+  }
 
   return (
-    <div>
-      <h1>MonsterPage {params.monstersId}</h1>
-    </div>
+    <>
+      <div>
+        <MonsterList monsterId={monsterId} />
+      </div>
+    </>
   );
 };
