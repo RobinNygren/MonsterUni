@@ -11,17 +11,18 @@ const AddMonster = () => {
     lastName: "",
     description: "",
     abilities: {
-      science: [],
-      magic: [],
+      science: "",
+      magic: "",
     },
     origin: "",
-    num_eyes: 0,
-    num_arms: 0,
-    num_horns: 0,
-    num_wings: 0,
-    num_tentacles: 0,
-    num_mouths: 0,
-    num_tails: 0,
+    physicalAttributes: {
+      wings: 0,
+      horns: 0,
+      tentacles: 0,
+      eyes: 0,
+      arms: 0,
+      tails: 0,
+    },
   });
 
   const handleChange: React.ChangeEventHandler = (e: React.FormEvent) => {
@@ -33,7 +34,7 @@ const AddMonster = () => {
         ...prev,
         abilities: {
           ...prev.abilities,
-          [abilityKey]: value.split(",").map((s) => s.trim()),
+          [abilityKey]: value,
         },
       }));
     } else {
@@ -46,7 +47,7 @@ const AddMonster = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    dispatch(addMonster(monster));
+    dispatch({ type: "ADD_MONSTERS", payload: monster });
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -58,7 +59,7 @@ const AddMonster = () => {
       />
       <textarea
         name="abilities.science"
-        value={monster.abilities.science.join(", ")}
+        value={monster.abilities.science}
         onChange={handleChange}
         placeholder="Enter science abilities separated by commas"
       />
