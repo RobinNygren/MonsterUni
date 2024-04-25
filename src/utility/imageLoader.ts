@@ -6,7 +6,7 @@ export const getMonsterImage = async (
   const formattedLastName = lastName.toLowerCase().replace(/ /g, "");
   try {
     const image = await import(
-      `../../assets/MonsterAvatars/${formattedFirstName}_${formattedLastName}.png`
+      `../assets/MonsterAvatars/${formattedFirstName}_${formattedLastName}.png`
     );
     return image.default;
   } catch (error) {

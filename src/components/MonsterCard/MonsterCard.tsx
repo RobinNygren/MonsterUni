@@ -5,9 +5,10 @@ import { Monster } from "../../types";
 
 type MonsterCardProps = {
   monsterId: string;
+  onClick: (monster: Monster) => void;
 };
 
-const MonsterCard: React.FC<MonsterCardProps> = ({ monsterId }) => {
+const MonsterCard: React.FC<MonsterCardProps> = ({ monsterId, onClick }) => {
   const { state } = useContext(GlobalStateContext);
   const monster = state.monsters.find((m) => m.id === monsterId);
 
