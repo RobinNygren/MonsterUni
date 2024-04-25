@@ -22,14 +22,14 @@ type Monster = {
   physicalAttributes: MonsterAttributes;
 };
 
-type MonsterContextType = {
+type GlobalStateContextType = {
   monsters: Monster[];
   setMonsters: (monsters: Monster[]) => void;
 };
 
 type Action =
   | { type: "ADD_MONSTERS"; payload: Monster }
-  | { type: "REMOVE_MONSTER"; payload: Monster }
+  | { type: "REMOVE_MONSTER"; payload: { id: string } }
   | { type: "UPDATE_MONSTER"; payload: Monster };
 
 type GlobalState = {
@@ -42,7 +42,7 @@ type MonsterListProps = {
 
 export type {
   Monster,
-  MonsterContextType,
+  GlobalStateContextType,
   Action,
   GlobalState,
   MonsterListProps,

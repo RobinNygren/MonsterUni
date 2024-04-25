@@ -1,8 +1,19 @@
 import { createContext } from "react";
 import { Action, GlobalState, Monster } from "../types";
+import monstersData from "../data/monsters.json";
+import { v4 as uuidv4 } from "uuid";
 
-export const initialMonsterState = {
-  monsters: [] as Monster[],
+type PreIdMonster = Partial<Monster>;
+
+export const initialMonsters: Monster[] = monstersData.map(
+  (monster: PreIdMonster) => ({
+    ...monster,
+    id: uuidv4(),
+  })
+) as Monster[];
+
+export const initialMonsterState: GlobalState = {
+  monsters: initialMonsters,
 };
 
 export const GlobalStateContext = createContext<{

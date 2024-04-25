@@ -1,9 +1,11 @@
-import useCustomContext from "../../hooks/useMonster";
-import { MonsterContext } from "../Context/MonsterContext";
-import { Monster, MonsterContextType, MonsterListProps } from "../../types";
+import { useContext } from "react";
+import { GlobalStateContext } from "../../state/GlobalStateContext";
+import { MonsterListProps } from "../../types";
 
 const MonsterList = ({ monsterId }: MonsterListProps) => {
-  const { monsters } = useCustomContext<MonsterContextType>(MonsterContext);
+  const { state } = useContext(GlobalStateContext);
+  const { monsters } = state;
+
   const monster = monsters?.find((m) => m.id === monsterId);
 
   return (

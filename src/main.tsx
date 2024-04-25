@@ -4,8 +4,9 @@ import { HomePage } from "./pages/HomePage";
 import { MonstersPage } from "./pages/MonstersPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { MonsterPage } from "./pages/MonsterPage";
+import AddMonster from "./pages/AddMonster";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MonsterProvider from "./components/Context/MonsterProvider";
+import { GlobalStateProvider } from "./components/GlobalStateProvider";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             path: ":monsterId",
             element: <MonsterPage />,
           },
+          {
+            path: "add-monster",
+            element: <AddMonster />,
+          },
         ],
       },
     ],
@@ -30,8 +35,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <MonsterProvider>
+    <GlobalStateProvider>
       <RouterProvider router={router} />
-    </MonsterProvider>
+    </GlobalStateProvider>
   </React.StrictMode>
 );

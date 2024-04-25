@@ -25,3 +25,5 @@ const reducer = (state: GlobalState, action: Action): GlobalState => {
       return state;
   }
 };
+
+export default reducer;

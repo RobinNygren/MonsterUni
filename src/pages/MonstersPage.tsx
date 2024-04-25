@@ -1,10 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
-import useCustomContext from "../hooks/useMonster";
-import { MonsterContext } from "../components/Context/MonsterContext";
-import { Monster, MonsterContextType } from "../types";
+import { useContext } from "react";
+import { GlobalStateContext } from "../state/GlobalStateContext";
+import { Monster } from "../types";
 
 export const MonstersPage = () => {
-  const { monsters } = useCustomContext<MonsterContextType>(MonsterContext);
+  const { state } = useContext(GlobalStateContext);
+  const { monsters } = state;
   return (
     <div className="flex gap-2">
       <div className="flex flex-col gap-2">
