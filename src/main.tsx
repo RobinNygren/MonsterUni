@@ -4,6 +4,9 @@ import { HomePage } from "./pages/HomePage";
 import { MonstersPage } from "./pages/MonstersPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { MonsterPage } from "./pages/MonsterPage";
+import { EditMonsters } from "./pages/EditMonsters";
+import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
 import AddMonster from "./pages/AddMonster";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GlobalStateProvider } from "./components/GlobalStateProvider";
@@ -23,11 +26,23 @@ const router = createBrowserRouter([
             path: ":monsterId",
             element: <MonsterPage />,
           },
-          {
-            path: "add-monster",
-            element: <AddMonster />,
-          },
         ],
+      },
+      {
+        path: "add-monster",
+        element: <AddMonster />,
+      },
+      {
+        path: "edit-monster",
+        element: <EditMonsters />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },
