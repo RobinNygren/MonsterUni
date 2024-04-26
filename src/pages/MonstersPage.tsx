@@ -20,7 +20,7 @@ export const MonstersPage = () => {
     }
   }, [selectedMonster]);
 
-  const handleMonsterClick = (monster: Monster) => {
+  const handleMonsterClick = (monster: Monster, event: React.MouseEvent) => {
     setSelectedMonster(monster);
     setIsModalOpen(true);
   };
@@ -29,16 +29,26 @@ export const MonstersPage = () => {
     <div className="flex gap-2">
       <div className="flex flex-col gap-2">
         {monsters.map((monster: Monster) => (
-          <NavLink
-            key={monster.firstName}
-            to={`/monsters/${monster.id}`}
-            className={({ isActive }) => {
-              return isActive ? "text-blue-500" : "";
-            }}
-            onClick={() => handleMonsterClick(monster)}
-          >
-            {monster.firstName} {monster.lastName}
-          </NavLink>
+          <div key={monster.id} className="flex items-center justify-between">
+            <NavLink
+              key={monster.firstName}
+              to={`/monsters/${monster.id}`}
+              className={({ isActive }) => {
+                return isActive ? "text-blue-500" : "";
+              }}
+              onClick={(event) => {
+                handleMonsterClick(monster, event);
+              }}
+            >
+              {monster.firstName} {monster.lastName}
+            </NavLink>
+            <button
+              onClick={(event) => handleMonsterClick(monster, event)}
+              className="ml-2"
+            >
+              📷
+            </button>
+          </div>
         ))}
       </div>
       <Outlet />
